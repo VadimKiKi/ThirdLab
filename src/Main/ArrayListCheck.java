@@ -37,4 +37,17 @@ public class ArrayListCheck {
         duration = (endTime - startTime);
         return duration;
     }
+
+    public long TestDeleteFromBegin() {
+        for (int i = 0; i < N; i++) {
+            A.add(1);
+        }
+        startTime = System.nanoTime();
+        for (int i = 0; i < N; i++) {
+            A.remove(0);
+        }
+        endTime = System.nanoTime();
+        duration = (endTime - startTime);
+        return duration;
+    }
 }
