@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class ArrayListCheck {
     private long startTime;
     private long endTime;
-    private long duration;
     private ArrayList<Integer> A = new ArrayList<>();
     private int N;
 
@@ -20,9 +19,8 @@ public class ArrayListCheck {
             A.add(1);
         }
         endTime = System.nanoTime();
-        duration = (endTime - startTime);
         A.clear();
-        return duration;
+        return endTime - startTime;
     }
 
     public long TestDeleteFromTail() {
@@ -34,8 +32,7 @@ public class ArrayListCheck {
             A.remove(i);
         }
         endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        return duration;
+        return endTime - startTime;
     }
 
     public long TestDeleteFromBegin() {
@@ -47,7 +44,6 @@ public class ArrayListCheck {
             A.remove(0);
         }
         endTime = System.nanoTime();
-        duration = (endTime - startTime);
-        return duration;
+        return endTime - startTime;
     }
 }
